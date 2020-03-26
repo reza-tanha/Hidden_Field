@@ -20,15 +20,15 @@ class Hidden_Param(object):
     def banner(self):
         print(Fore.GREEN + """     
 
-                    +++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    #    Find Hidden Parameter In The Site               #
-                    #    Version 1.0                                    #
-                    #    Github : https://github.com/reza-tanha/        #
-                    #    Telegram : T.me/S3CURITY_GARY                  #
-                    #    Code By : Haji (Reza)                          #
-                    #                                                   #
-                    #    Gray Security Team                             #
-                    +++++++++++++++++++++++++++++++++++++++++++++++++++++
+                +++++++++++++++++++++++++++++++++++++++++++++++++++++
+                #    Find Hidden Parameter In The Site              #
+                #    Version 1.0                                    #
+                #    Github : https://github.com/reza-tanha/        #
+                #    Telegram : T.me/S3CURITY_GARY                  #
+                #    Code By : Haji (Reza)                          #
+                #                                                   #
+                #    Gray Security Team                             #
+                +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         """)
 
@@ -46,6 +46,7 @@ class Hidden_Param(object):
          'Connection': 'close'}
         return user_a
 
+
     def scan_site(self):
         if self.proxy !=None:
             proxies = {
@@ -59,10 +60,11 @@ class Hidden_Param(object):
             soup = BeautifulSoup(req.text, features='html.parser')
             c = 0
             ch = 0
+            print(Fore.RED +"--"*len(self.check_http()))
+            print(Fore.CYAN+ "site : "+Fore.GREEN+self.check_http())
+            print(Fore.RED + "--" * len(self.check_http())+"\n")
             for i in soup.find_all():
                 c+=1
-                # print(c)
-
                 if i.get('type') == "hidden":
                     ch+=1
                     print(Fore.LIGHTGREEN_EX + "[+] Find Hidde Parameter in Line "+Fore.LIGHTYELLOW_EX+str(c) +" "+  Fore.LIGHTCYAN_EX + str(i))
