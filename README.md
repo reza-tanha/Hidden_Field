@@ -6,7 +6,7 @@ coded by [Gray Security Team](https://T.me/S3CURITY_GRAY)
 
 
 ## Example
-![alt text](http://s7.picofile.com/file/8392134834/hid.png "Hidde")
+![alt text](http://s6.picofile.com/file/8392137442/hiden.png "Hidde")
 
 ## Installation & Runing
 ``` 
